@@ -54,5 +54,4 @@ Continuing.
 7     c=a+b;
 8     printf("sum of %d and %d is %d\n",a,b,c);
 9     return 0;
-10  }
-(gdb) 
+10  } 
