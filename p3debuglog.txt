@@ -1,0 +1,40 @@
+gcc -g p2original.c;./a.out
+ Enter value
+1 2
+ Enter value
+Sum is 3 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x804: file p2original.c, line 23.
+(gdb) r
+Starting program: /home/runner/test4-Veeranaganjineyareddy-23/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2original.c:23
+23    a=input();
+(gdb) n
+ Enter value
+n
+24    b=input();
+(gdb) 
+ Enter value
+25    sum=add(a,b);
+(gdb) n
+26    output(sum);
+(gdb) n
+27    return 0;
