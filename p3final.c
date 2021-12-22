@@ -1,4 +1,4 @@
-gbd#include <stdio.h>
+#include <stdio.h>
 int input();
 int add(int a, int b, int *sum);1
 void output(int a,int b,int sum);
