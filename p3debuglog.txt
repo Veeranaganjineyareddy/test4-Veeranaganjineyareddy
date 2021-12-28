@@ -1,8 +1,9 @@
-gcc -g p2original.c;./a.out
- Enter value
-1 2
- Enter value
-Sum is 3 
+gcc -g p3final.c
+ ./a.out
+enter two values of a,b
+2
+2
+sum of two numbers is 2+2 is 4 
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -20,21 +21,33 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x804: file p2original.c, line 23.
+Breakpoint 1 at 0x7fc: file p3final.c, line 16.
 (gdb) r
-Starting program: /home/runner/test4-Veeranaganjineyareddy-23/a.out 
+Starting program: /home/runner/test4-Veeranaganjineyareddy-31/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p2original.c:23
-23    a=input();
+Breakpoint 1, main () at p3final.c:16
+16  {
 (gdb) n
- Enter value
+18  input(&a,&b);
+(gdb) n
+enter two values of a,b
 n
-24    b=input();
-(gdb) 
- Enter value
-25    sum=add(a,b);
+19  add(a,b,&sum);
 (gdb) n
-26    output(sum);
+20  output(a,b,sum);
 (gdb) n
-27    return 0;
+21  return 0;
+(gdb) s
+22  }(gdb) p
+The history is empty.
+(gdb) c
+Continuing.
+sum of two numbers is 22086+-899865152 is -899843066[Inferior 1 (process 1669) exited normally]
+(gdb) l
+17  int a,b,sum;
+18  input(&a,&b);
+19  add(a,b,&sum);
+20  output(a,b,sum);
+21  return 0;
+22  }(gdb) 
